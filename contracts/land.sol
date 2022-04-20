@@ -1172,7 +1172,7 @@ contract UBUNTULAND is ERC721, Ownable, Pausable {
     mapping (uint256 => string) private _tokenURIs;
 
     //Constructor
-    constructor() ERC721("Africarare Ubuntuland", "UBUL") {   
+    constructor() ERC721("Africarare Ubuntuland", "UBUL") {
     }
 
     /**
@@ -1223,7 +1223,7 @@ contract UBUNTULAND is ERC721, Ownable, Pausable {
     /**
     * @dev Mints 1 NFT to senders address
     */
-    function mintSingleLandCouponNFT(uint256 tokenId) internal onlyOwner {
+    function mintSingleLandNFT(uint256 tokenId) internal onlyOwner {
         require(!_exists(tokenId), "That token ID has already been minted. Please try again.");
         ++numMinted;
         _safeMint(msg.sender, tokenId);
@@ -1234,7 +1234,7 @@ contract UBUNTULAND is ERC721, Ownable, Pausable {
     /**
     * @dev Mints 1 NFT to specified address
     */
-    function mintToAddressSingleLandCouponNFT(uint256 tokenId, address receiverAddress) internal onlyOwner {
+    function mintToAddressSingleLandNFT(uint256 tokenId, address receiverAddress) internal onlyOwner {
         require(!_exists(tokenId), "That token ID has already been minted. Please try again.");
         ++numMinted;
         _safeMint(receiverAddress, tokenId);
@@ -1245,18 +1245,18 @@ contract UBUNTULAND is ERC721, Ownable, Pausable {
     /**
     * @dev Mints batch of n number of NFTs
     */
-    function mintBatchOfLandCouponNFT(uint256[] memory tokenIds) external onlyOwner {
+    function mintBatchOfLandNFT(uint256[] memory tokenIds) external onlyOwner {
         for (uint i=0; i < tokenIds.length; i++) {
-            mintSingleLandCouponNFT(tokenIds[i]);
+            mintSingleLandNFT(tokenIds[i]);
         }
     }
 
     /**
     * @dev Mints batch of n number of NFTs to specified address
     */
-    function mintToAddressBatchOfLandCouponNFT(uint256[] memory tokenIds, address receiverAddress) external onlyOwner {
+    function mintToAddressBatchOfLandNFT(uint256[] memory tokenIds, address receiverAddress) external onlyOwner {
         for (uint i=0; i < tokenIds.length; i++) {
-            mintToAddressSingleLandCouponNFT(tokenIds[i], receiverAddress);
+            mintToAddressSingleLandNFT(tokenIds[i], receiverAddress);
         }
     }
 
