@@ -1185,6 +1185,13 @@ contract AFRICARARELANDCOUPON is ERC721, Ownable, Pausable {
     }
 
     /**
+    * @dev sets base URI
+    */
+    function _setBaseURI(string memory baseURI) external onlyOwner {
+        _baseURIextended = baseURI;
+    }
+
+    /**
     * @dev sets token URI
     */
     function _setTokenURI(uint256 tokenId) internal virtual {

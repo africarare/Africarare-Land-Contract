@@ -74,11 +74,11 @@
 	},
 	"sources": {
 		"contracts/land.sol": {
-			"keccak256": "0xcc1dfe181eb6528fcea49ed4d6f462084a221261432d2419bb86be903553889f",
+			"keccak256": "0xa6e1f391219c69c0f244f108a72f930a3ed5a382b3d10f61466756c1aa81d9a1",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://3299a7799cfb7ca79febbc639a84f89fee676e61407930aa5ba880b94a6e439a",
-				"dweb:/ipfs/QmaYEUhfTXvHyxHkbq8KZsdNU9R9yQG62Ueg7JKdfjLsoA"
+				"bzz-raw://05cd6387d08b8fd40ce3ad857b5128aabd54d28278a50f0240195ace7d49d6c8",
+				"dweb:/ipfs/QmNWXzNastnm9FGHrLzbc9W7pCwwzjiuk6qVAX7MZiGoMQ"
 			]
 		}
 	},
