@@ -1165,8 +1165,9 @@ contract AFRICARARELANDCOUPON is ERC721, Ownable, Pausable {
     //Tracks num minted
     uint256 public numMinted = 0;
 
-    //Sets the URI base for where metadata is located on IPFS
+    //Sets the URI base and head for where metadata is located on IPFS
     string public _baseURIextended = "https://gateway.pinata.cloud/ipfs/QmfS1tJoY1ZpHpa7RJvziV7MoRc6NXrHWARrWt7pdXAXwQ/AfricarareUbuntuland_";
+    string public _headURIextended = ".json";
 
 
 
@@ -1190,6 +1191,19 @@ contract AFRICARARELANDCOUPON is ERC721, Ownable, Pausable {
     function _setBaseURI(string memory baseURI) external onlyOwner {
         _baseURIextended = baseURI;
     }
+    /**
+    * @dev returns head URI
+    */
+    function _headURI() internal view virtual returns (string memory) {
+        return _headURIextended;
+    }
+
+    /**
+    * @dev sets head URI
+    */
+    function _setHeadURI(string memory headURI) external onlyOwner {
+        _headURIextended = headURI;
+    }
 
     /**
     * @dev sets token URI
@@ -1205,7 +1219,7 @@ contract AFRICARARELANDCOUPON is ERC721, Ownable, Pausable {
     */
     function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
         require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
-        return string(abi.encodePacked(_baseURI(), Strings.toString(tokenId), ".json"));
+        return string(abi.encodePacked(_baseURI(), Strings.toString(tokenId), _headURI()));
 
     }
 
