@@ -1166,7 +1166,7 @@ contract AFRICARARELANDCOUPON is ERC721, Ownable, Pausable {
     uint256 public numMinted = 0;
 
     //Sets the URI base for where metadata is located on IPFS
-    string public _baseURIextended = "https://ipfs.io/ipfs/QmYipxb1MvM6DF4NcVRzGMhxPRyWDXWXAwneGGovi4Khdp/THC_NAZA_";
+    string public _baseURIextended = "https://gateway.pinata.cloud/ipfs/QmXSbsrkG24RPN2cm9KZo5siAiGFxymHprtGedVZM5JEgy/metadata/AfricarareUbuntuland_";
 
 
 
@@ -1174,10 +1174,8 @@ contract AFRICARARELANDCOUPON is ERC721, Ownable, Pausable {
     mapping (uint256 => string) private _tokenURIs;
 
     //Constructor
-    constructor() ERC721("Africarare LandCoupon Collection", "lRARE") {
-        
+    constructor() ERC721("Africarare Ubuntuland", "UBUL") {   
     }
-
 
     /**
     * @dev returns base URI
