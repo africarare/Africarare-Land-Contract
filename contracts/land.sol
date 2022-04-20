@@ -1161,15 +1161,12 @@ abstract contract Pausable is Context {
 
 contract UBUNTULAND is ERC721, Ownable, Pausable {
 
-
     //Tracks num minted
     uint256 public numMinted = 0;
 
     //Sets the URI base and head for where metadata is located on IPFS
     string public _baseURIextended = "https://gateway.pinata.cloud/ipfs/QmfS1tJoY1ZpHpa7RJvziV7MoRc6NXrHWARrWt7pdXAXwQ/AfricarareUbuntuland_";
     string public _headURIextended = ".json";
-
-
 
     // Mapping for token URIs
     mapping (uint256 => string) private _tokenURIs;
@@ -1191,6 +1188,7 @@ contract UBUNTULAND is ERC721, Ownable, Pausable {
     function _setBaseURI(string memory baseURI) external onlyOwner {
         _baseURIextended = baseURI;
     }
+
     /**
     * @dev returns head URI
     */
@@ -1213,7 +1211,6 @@ contract UBUNTULAND is ERC721, Ownable, Pausable {
         _tokenURIs[tokenId] = Strings.toString(tokenId);
     }
 
-
     /**
     * @dev gets token URI
     */
@@ -1222,7 +1219,6 @@ contract UBUNTULAND is ERC721, Ownable, Pausable {
         return string(abi.encodePacked(_baseURI(), Strings.toString(tokenId), _headURI()));
 
     }
-
 
     /**
     * @dev Mints 1 NFT to senders address
@@ -1234,7 +1230,6 @@ contract UBUNTULAND is ERC721, Ownable, Pausable {
         _setTokenURI(tokenId);
 
     }
-
 
     /**
     * @dev Mints 1 NFT to specified address
@@ -1275,7 +1270,6 @@ contract UBUNTULAND is ERC721, Ownable, Pausable {
         ownerAddress.transfer(balance);
     }
 
-
     /**
     * @dev Pause
     */
@@ -1283,7 +1277,7 @@ contract UBUNTULAND is ERC721, Ownable, Pausable {
         super._pause();
     }
 
-  /**
+    /**
     * @dev Unpause
     */
     function unpause() external virtual onlyOwner() {
