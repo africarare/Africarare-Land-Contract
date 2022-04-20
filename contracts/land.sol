@@ -1159,7 +1159,7 @@ abstract contract Pausable is Context {
  * @dev Smart contract for Africarare to Land Coupons
  */
 
-contract AFRICARARELANDCOUPON is ERC721, Ownable, Pausable {
+contract UBUNTULAND is ERC721, Ownable, Pausable {
 
 
     //Tracks num minted
