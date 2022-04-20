@@ -1166,7 +1166,7 @@ contract AFRICARARELANDCOUPON is ERC721, Ownable, Pausable {
     uint256 public numMinted = 0;
 
     //Sets the URI base for where metadata is located on IPFS
-    string public _baseURIextended = "https://gateway.pinata.cloud/ipfs/QmXSbsrkG24RPN2cm9KZo5siAiGFxymHprtGedVZM5JEgy/metadata/AfricarareUbuntuland_";
+    string public _baseURIextended = "https://gateway.pinata.cloud/ipfs/QmfS1tJoY1ZpHpa7RJvziV7MoRc6NXrHWARrWt7pdXAXwQ/AfricarareUbuntuland_";
 
 
 
