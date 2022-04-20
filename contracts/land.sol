@@ -1156,7 +1156,7 @@ abstract contract Pausable is Context {
 /**
  * @title AfricaRare Mint Contract
  * @author Beau Williams (@beauwilliams)
- * @dev Smart contract for Africarare to Land Coupons
+ * @dev Smart contract for Africarare Ubuntuland
  */
 
 contract UBUNTULAND is ERC721, Ownable, Pausable {
